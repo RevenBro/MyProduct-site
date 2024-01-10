@@ -1,0 +1,142 @@
+.collab-section {
+    padding-bottom: 170px;
+}
+
+.collab {
+    @include display()
+}
+
+.collab__strong {
+    @include siteText($fontWeight: 600, $lineHeight: normal);
+    margin-bottom: 8px;
+}
+
+.collab__title {
+    @include siteText($fontSize: 32px, $fontWeight: 700, $lineHeight: normal);
+    margin-bottom: 23px;
+}
+
+.collab__text-wrapper {
+    width: 486px;
+}
+
+.collab__text {
+    @include siteText($lineHeight: 26px)
+}
+
+.collab__bottom {
+    margin-top: 30px;
+}
+
+.collab__bottom-span {
+    @include siteText($fontWeight: 600,$lineHeight: 26px);
+    margin-bottom: 12px;
+}
+
+.collab__bottom-text {
+    @include siteText($lineHeight: 26px)
+}
+
+@media (max-width: 1060px) {
+    .collab__text-wrapper {
+        width: 400px;
+    }
+}
+@media (max-width: 960px) {
+    .collab__img {
+        width: 520px;
+        height: 430px;
+    }
+
+    .collab__text-wrapper {
+        width: 350px;
+    }
+}
+
+@media (max-width: 892px) {
+    .collab__text-wrapper {
+        width: 320px;
+    }
+
+    .collab__bottom-text {
+        width: 320px;
+    }
+}
+
+@media (max-width: 885px) {
+    .collab {
+        @include display($direction: column-reverse)
+    }
+
+    .collab__strong {
+        display: block;
+        text-align: center;
+    }
+
+    .collab__title {
+        text-align: center;
+    }
+
+    .collab__text-wrapper {
+        width: 100%;
+        padding: 0 40px;
+    }
+
+    .collab__text {
+        text-align: center;
+    }
+
+    .collab__bottom {
+        width: 100%;
+        padding: 0 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 528px) {
+    .collab__img {
+        width: 350px;
+        height: 290px;
+    }
+}
+
+@media (max-width: 500px) {
+    .collab__text-wrapper {
+        padding: 0 10px;
+    }
+
+
+
+    .collab__strong {
+        text-align: start;
+    }
+
+    .collab__title {
+        text-align: start;
+    }
+
+    .collab__text-wrapper {
+        padding: 0;
+        text-align: start;
+    }
+
+    .collab__text {
+        text-align: start;
+    }
+
+    .collab__bottom {
+        padding: 0;
+        text-align: start;
+    }
+
+    .collab__bottom-span {
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .collab__img {
+        width: 270px;
+        height: 200px;
+    }
+}

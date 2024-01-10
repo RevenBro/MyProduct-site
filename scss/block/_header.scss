@@ -1,0 +1,115 @@
+.site-header {
+    padding: 18px 0 19px;
+    width: 100%;
+    position: fixed;
+    background-color: #FFF;
+    box-shadow: 0px -2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.header {
+    @include display();
+}
+
+.header__logo-img {
+    display: inline-block;
+}
+
+.header__right {
+    @include display()
+}
+
+.header__navbar {
+    margin-right: 24px;
+}
+
+.navbar__list {
+    @include display();
+}
+
+.navbar__item + .navbar__item {
+    margin-left: 33px;
+}
+
+.navbar__link {
+    @include siteText();
+    transition: color 0.4s;
+
+    &:hover {
+        color: #02897A;
+    }
+}
+
+.sign__in-link {
+    @include button($color: #173A56,$bgColor: transparent);
+    border: 1px solid #BCD0E5;
+    margin-right: 24px;
+
+    &:hover {
+        @include button($color: #02897A, $bgColor: transparent);
+        border-color: #02897A;
+    }
+}
+
+.sign__up-link {
+    @include button();
+    margin-right: 24px;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.theme-btn {
+    display: flex;
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 100px;
+    background: #F3F3F3;
+    cursor: pointer;
+}
+
+.hamburger-btn {
+    border: none;
+    background: none;
+    display: none;
+}
+
+@media (max-width: 978px) {
+    .header__navbar {
+        margin-right: 20px;
+    } 
+
+    .navbar__item + .navbar__item {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 920px) {
+    .header__navbar {
+        display: none;
+    }
+
+    .hamburger-btn {
+        margin-left: 24px;
+        display: block;
+    }
+}
+
+@media (max-width: 640px) {
+    .sign-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 411px) {
+    .theme-btn {
+        display: none;
+    }
+
+    .header__logo-img {
+        width: 170px;
+        height: 36px;
+    }
+}

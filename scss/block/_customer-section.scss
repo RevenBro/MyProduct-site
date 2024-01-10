@@ -1,0 +1,139 @@
+.customer-section {
+    padding-bottom: 150px;
+}
+
+.customer {
+    @include display()
+}
+
+.customer__strong {
+    @include siteText($fontWeight: 600, $lineHeight: normal);
+    margin-bottom: 8px;
+}
+
+.customer__title {
+    @include siteText($fontSize: 32px, $fontWeight: 700, $lineHeight: normal);
+    margin-bottom: 23px;
+}
+
+.customer__text-wrapper {
+    width: 486px;
+    margin-bottom: 30px;
+}
+
+.customer__text {
+    @include siteText($lineHeight: 26px)
+}
+
+.check__item {
+    width: 420px;
+    @include display($justify: start);
+    gap: 30px;
+    
+    & + & {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1060px) {
+    .customer__text-wrapper {
+        width: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .customer__text-wrapper {
+        width: 350px;
+    }
+
+    .check__item {
+        width: 380px;
+    }
+
+    .customer__img {
+        width: 480px;
+        height: 420px;
+    }
+}
+
+@media (max-width: 885px) {
+    .customer {
+        @include display($direction: column)
+    }
+
+    .customer__img {
+        margin-bottom: 30px;
+    }
+
+    .customer__strong {
+        display: block;
+        text-align: center;
+    }
+
+    .customer__title {
+        text-align: center;
+    }
+
+    .customer__text-wrapper {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .customer__text {
+        text-align: center;
+    }
+
+    .customer__check {
+        width: 100%;
+    }
+
+    .check__item {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    .customer__img {
+        width: 350px;
+        height: 319px;
+        margin-bottom: 50px;
+    }
+
+    .customer__strong {
+        text-align: start;
+    }
+
+    .customer__title {
+        text-align: start;
+    }
+
+    .customer__text-wrapper {
+        padding: 0;
+    }
+
+    .customer__text {
+        text-align: start;
+    }
+
+    .check__item {
+        margin: 0;
+    }
+}
+
+@media (max-width: 392px) {
+    .customer__img {
+        width: 300px;
+        height: 260px;
+    }
+
+    .check__item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 392px) {
+    .customer__img {
+        width: 260px;
+        height: 200px;
+    }
+}

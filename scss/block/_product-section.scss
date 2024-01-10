@@ -1,0 +1,128 @@
+.product-section {
+    width: 100%;
+    padding-bottom: 104px;
+    background-image: url("../images/product-bg.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.product__title-wrapper {
+    width: 539px;
+    margin: 0 auto;
+    margin-bottom: 66px;
+}
+
+.product__title {
+    @include siteText($fontSize: 32px, $fontWeight: 700, $lineHeight: normal);
+    text-align: center;
+}
+
+.product__card-wrapper {
+    @include display($items: start);
+    margin-bottom: 60px;
+}
+
+.product__card {
+    width: 220px;
+}
+
+.product__card:nth-child(2) > .product__card-icon {
+    background-color: #4D8DFF;
+}
+
+.product__card:nth-child(3) > .product__card-icon {
+    background-color: #740A76;
+}
+
+.product__card:nth-child(4) > .product__card-icon {
+    background-color: #F03E3D;
+}
+
+.product__card-icon {
+    width: 50px;
+    height: 50px;
+    padding: 16px 19px;
+    margin-bottom: 30px;
+    border-radius: 19px;
+    background-color: #02897A;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.product__card-title {
+    @include siteText($fontSize: 22px, $fontWeight: 600, $lineHeight: normal);
+    margin-bottom: 13px;
+}
+
+.product__card-text {
+    @include siteText($lineHeight: 26px)
+}
+
+.product__link {
+    @include button($width: 175px);
+    padding: 15px 0 14px;
+    display: block;
+    margin: 0 auto;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 910px) {
+
+    .product__title-wrapper {
+        width: 100%;
+    }
+
+    .product__card-wrapper {
+        flex-wrap: wrap;
+    }
+
+    .product__card {
+        width: 35%;
+        text-align: center;
+    }
+
+    .product__card:nth-child(1), .product__card:nth-child(2) {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 510px) {
+    .product__card-wrapper {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .product__card {
+        margin: 0 auto;
+        padding-bottom: 114px;
+        align-items: center;
+    }
+
+    .product__title-wrapper {
+        margin-bottom: 37px;
+    }
+
+    .hero__title {
+        @include siteText($fontSize: 32px, $fontWeight: 700, $lineHeight: normal)
+    }
+
+    .product__card {
+        width: 100%;
+        padding-bottom: 0;
+
+        & + & {
+            margin-top: 37px;
+        }
+    }
+
+    .product__card-icon {
+        margin-bottom: 24px;
+    }
+
+    .product__card-title {
+        margin-bottom: 8px;
+        @include siteText($fontSize: 22px, $fontWeight: 600px, $lineHeight: normal)
+    }
+}
