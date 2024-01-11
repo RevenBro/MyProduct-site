@@ -1,0 +1,96 @@
+.boost-section {
+    padding: 0 65px 100px 65px;
+}
+
+.boost {
+    @include display();
+    border-radius: 32px;
+    background-color: #02897A;
+}
+.boost__content {
+    width: 510px;
+    padding: 49px 0 56px 51px;
+}
+
+.boost__title {
+    @include siteText($color: #fff, $fontSize: 32px, $fontWeight: 600, $lineHeight: 151.4%);
+    margin-bottom: 80px;
+}
+
+.boost__btn-wrap {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.boost__btn {
+    @include button($bgColor: #fff, $color: #02897A, $width: 150px);
+    font-size: 20px;
+}
+
+@media (max-width: 870px) {
+    .boost {
+        flex-direction: column;
+    }
+
+    .boost__content {
+        width: 100%;
+        margin-bottom: 50px;
+        padding: 20px 20px 20px 0;
+        text-align: center;
+    }
+
+    .boost__title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 633px) {
+    .boost__content {
+        padding: 20px;
+    }
+
+    .boost__title {
+        @include siteText($color: #fff, $fontSize: 32px)
+    }
+}
+
+@media (max-width: 500px) {
+    .boost-section {
+        padding: 0 15px 100px 15px;
+    }
+}
+
+@media (max-width: 370px) {
+    .boost__img {
+        width: 310px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 320px) {
+    .boost-section {
+        padding: 0;
+    }
+
+    .boost__img {
+        width: 290px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 295px) {
+    .boost__content {
+        padding: 10px 5px;
+    }
+
+    .boost__img {
+        width: 270px;
+        height: 220px;
+    }
+}

@@ -1,0 +1,149 @@
+.price-section {
+    padding-bottom: 150px;
+}
+
+.price__content {
+    margin-bottom: 50px;
+}
+
+.price__title {
+    @include siteText($fontSize: 34px, $fontWeight: 700, $lineHeight: normal);
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.price__text {
+    @include siteText($fontWeight: 500, $lineHeight: normal);
+    text-align: center;
+}
+
+.price__card-wrapper {
+    @include display()
+}
+
+.price__card {
+    width: 322px;
+    padding: 24px 73px 32px;
+    text-align: center;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+    transition: all 0.4s linear;
+
+    &:hover {
+        background-color: #02897A;
+
+        .price__card-bold {
+            color: #fff;
+        }
+
+        .price__card-text {
+            color: #fff;
+        }
+
+        .price__name {
+            color: #fff;
+        }
+
+        .price__val {
+            color: #fff;
+        }
+
+        .price__time {
+            color: #E0E0E0;
+        }
+
+        .price__comfort {
+            color: #fff
+        }
+
+        .price__link {
+            color: #02897A;
+            background-color: #fff;
+        }
+    }
+}
+
+.price__card-bold {
+    @include siteText($fontSize: 24px, $fontWeight: 700, $lineHeight: 40px);
+    margin-bottom: 8px;
+}
+
+.price__card-text {
+    @include siteText($lineHeight: 40px);
+    margin-bottom: 16px;
+}
+
+.price__list {
+    @include display($justify: start, $items: center);
+    margin-bottom: 40px;
+}
+
+.price__right {
+    @include display($direction: column, $justify: start, $items: start);
+    margin-left: 8px;
+}
+
+.price__name {
+    @include siteText($color: #02897A, $fontSize: 76px, $fontWeight: 700, $lineHeight: 100px);
+    letter-spacing: 0.2px;
+}
+
+.price__val {
+    @include siteText($color: #02897A, $fontSize: 24px, $fontWeight: 700, $lineHeight: 30px);
+    letter-spacing: 0.1px;
+}
+
+.price__time {
+    @include siteText($color: var(--second-text, #AFAFAF), $lineHeight: 19px);
+    letter-spacing: 0.1px;
+}
+
+.price__list2 {
+    margin-bottom: 38px;
+}
+ 
+.price__item + .price__item {
+    margin-top: 16px;
+}
+
+.price__comfort {
+    @include siteText($color: #22343D, $fontWeight: 700, $lineHeight: 22px);
+    font-family: "Inter", sans-serif;
+    letter-spacing: 0.2px;
+}
+
+.price__link {
+    @include button($width: 102px);
+    font-family: "Montserrat", sans-serif;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: normal;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 1050px) {
+    .price__card {
+        width: 280px;
+    }
+}
+
+@media (max-width: 912px) {
+    .price__card-wrapper {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .price__card {
+        width: 322px;
+    }
+}
+
+@media (max-width: 351px) {
+    .price__card {
+        width: 280px;
+    }
+}

@@ -17,7 +17,8 @@
 }
 
 .work__card-wrapper {
-    @include display()
+    @include display();
+    margin-bottom: 64px;
 }
 
 .work__card {
@@ -46,14 +47,48 @@
 
 .work__card-title {
     @include siteText($fontSize: 24px, $fontWeight: 700, $lineHeight: 40px);
-
+    
     &:hover {
         color: #02897A
     }
 }
 
-@media (max-width: 1107px) {
+.carusel__img-wrapper {
+    text-align: center;
+}
+
+@media (max-width: 1107px){
     .work__card-wrapper {
-        @include display($direction: column)
+        @include display($direction: column);
+        gap: 20px;
+    }
+
+    .work__title {
+        text-align: center;
+    }
+
+    .work__text {
+        text-align: center;
+    }
+}
+
+@media (max-width: 405px) {
+    .work__card {
+        width: 301px;
+    }
+
+    .work__img {
+        width: 300px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 305px) {
+    .work__card {
+        width: 271px;
+    }
+    .work__img {
+        width: 270px;
+        height: 110px;
     }
 }
